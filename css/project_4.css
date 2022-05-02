@@ -577,7 +577,7 @@ a {
 
 
 
-#level .level_pe:nth-child(3):after {
+#level .level_pe:nth-child(3)::after {
     content: "80%";
     left: 80%;
     transform: translateX(-50%);
