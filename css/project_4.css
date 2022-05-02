@@ -11,19 +11,19 @@ a {
 
 .entire {
     display: grid;
-    grid-template-rows: 850px auto 700px auto auto auto auto auto;
-    grid-auto-columns: minmax(100px, 1000px);
+    grid-template-rows: 1000px repeat(7, auto);
+    grid-template-columns: 100%;
 
     grid-template-areas:
 
-        "m m m m m"
-        "s s s s s"
-        "s_2 s_2 s_2 s_2 s_2"
-        "p p p p p"
-        "a_u a_u a_u a_u a_u"
-        "pr pr pr pr pr"
-        "us us us us us"
-        "f f f f f"
+        "m"
+        "s"
+        "s_2"
+        "p"
+        "a_u"
+        "pr"
+        "us"
+        "f"
 
     ;
 
@@ -517,6 +517,19 @@ a {
     width: 100%;
 }
 
+#level .level_pe::before {
+    content: "";
+    position: absolute;
+    left: 90%;
+    top: -5px;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top: 5px solid black;
+
+
+}
+
+
 .level_pe {
     position: relative;
     height: 30px;
@@ -525,7 +538,11 @@ a {
     margin: 70px;
 }
 
-.level_pe::after {
+
+#level .level_pe::after {
+    content: "90%";
+    left: 90%;
+    transform: translateX(-50%);
     position: absolute;
     color: white;
     background-color: black;
@@ -536,28 +553,49 @@ a {
     border-radius: 4px;
 }
 
-#one::after {
-    content: "90%";
-    left: 90%;
-    transform: translateX(-90%);
+#level .level_pe:nth-child(2)::before {
+    left: 85%;
+
 }
 
-#two::after {
+
+
+
+#level .level_pe:nth-child(2)::after {
     content: "85%";
     left: 85%;
-    transform: translateX(-85%);
+    transform: translateX(-50%);
 }
 
-#three::after {
+
+
+
+#level .level_pe:nth-child(3)::before {
+    left: 80%;
+
+}
+
+
+
+#level .level_pe:nth-child(3):after {
     content: "80%";
     left: 80%;
-    transform: translateX(-80%);
+    transform: translateX(-50%);
 }
 
-#four::after {
+
+
+
+#level .level_pe:nth-child(4)::before {
+    left: 90%;
+
+}
+
+
+#level .level_pe:nth-child(4)::after {
     content: "90%";
     left: 90%;
-    transform: translateX(-90%);
+    transform: translateX(-50%);
 }
 
 #text {
